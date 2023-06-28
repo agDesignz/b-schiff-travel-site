@@ -34,6 +34,10 @@
   flex-direction: column;
   align-items: stretch;
 
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
   @mixin atMedium {
     flex-direction: row;
     justify-content: space-between;
@@ -51,20 +55,11 @@
     &__medium-8--smaller {
       width: 60%;
     }
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
   }
 
-  /*******************************************/
-  /* @mixin atMedium {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: $gutterMedium;
 
-    &__medium-4 {
-      grid-column: span 4;
-    }
-
-    &__medium-8 {
-      grid-column: span 8;
-    }
-  } */
 }

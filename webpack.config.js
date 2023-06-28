@@ -16,10 +16,13 @@ module.exports = {
     path: path.resolve(__dirname, 'app')
   },
   devServer: {
-    watchFiles: ('./app/**/*.html'),
-    static: { directory: path.join(__dirname, 'app') },
-    hot: 'only',
-    liveReload: false,
+    watchFiles: ['./app/**/*.html'],
+    static: {
+      directory: path.join(__dirname, 'app'),
+      watch: false
+     },
+    hot: true,
+    // liveReload: false,
     port: 3000,
     host: '0.0.0.0'
   },
@@ -27,7 +30,7 @@ module.exports = {
   module: {
     rules: [{
       test: /\.css$/i,
-      use: ['style-loader', 'css-loader', { loader: 'postcss-loader', options: { postcssOptions: { plugins: postCSSPlugins } } }]
+      use: ["style-loader", { loader: "css-loader", options: { url: false } }, { loader: "postcss-loader", options: { postcssOptions: { plugins: postCSSPlugins } } }]
     }]
   }
 }
