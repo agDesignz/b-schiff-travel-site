@@ -7,6 +7,7 @@
   @mixin atSmall {
     flex-direction: row;
     justify-content: center;
+    align-items: center;
   }
 
   @mixin atMedium {
@@ -20,6 +21,10 @@
 
     @mixin atSmall {
       font-size: 3.75rem;
+    }
+
+    &--blue {
+      color: $mainBlue;
     }
 
     strong {

@@ -1,4 +1,66 @@
 .row {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  &__b-margin-until-medium {
+    margin-bottom: 1rem;
+  }
+
+  @mixin atMedium {
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    &--gutters {
+      gap: 5%;
+    }
+
+    &--gutters-large {
+      gap: 8.3%;
+    }
+
+    /* &__medium-4 {
+      flex: 1;
+    } */
+
+    &__medium-4--larger {
+      width: 37%;
+      max-width: 382px;
+
+      @mixin atLarge {
+        max-width: 404px
+      }
+    }
+
+    &__medium-8--smaller {
+      width: 63%;
+    }
+
+    &__medium-6 {
+      width: 50%;
+    }
+
+    &__b-margin-until-medium {
+      margin-bottom: 0;
+    }
+  }
+
+  &--lg {
+    flex-direction: column;
+
+    @mixin atLarge {
+      flex-direction: row;
+    }
+  }
+
+  &--t-padding {
+    padding-top: 80px;
+  }
+
+}
+
+  /*******************************************/
 
   /* @mixin clearfix;
 
@@ -29,49 +91,3 @@
       width: 63%;
     }
   } */
-  /*******************************************/
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-
-  &__b-margin-until-medium {
-    margin-bottom: 1rem;
-  }
-
-  @mixin atMedium {
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-
-    &--gutters {
-      gap: 5%;
-    }
-
-    &--gutters-large {
-      gap: 8.3%;
-    }
-
-    &__medium-4--larger {
-      width: 37%;
-      max-width: 382px;
-
-      @mixin atLarge {
-        max-width: 404px
-      }
-    }
-
-    &__medium-8--smaller {
-      width: 63%;
-    }
-
-    &__medium-6 {
-      width: 50%;
-    }
-
-    &__b-margin-until-medium {
-      margin-bottom: 0;
-    }
-  }
-
-
-}
