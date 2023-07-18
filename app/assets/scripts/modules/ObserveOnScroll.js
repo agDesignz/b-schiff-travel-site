@@ -18,9 +18,12 @@ class ObserveOnScroll {
   }
 
   revealSection(entries, observer) {
-    const [entry] = entries;
-    entry.target.classList.add('reveal-item--is-visible');
-    observer.unobserve(entry.target);
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-item--is-visible');
+        observer.unobserve(entry.target);
+      }
+    })
   }
 
   hideInitially() {
