@@ -10,6 +10,10 @@
     align-items: center;
   }
 
+  &--no-center {
+    align-items: flex-start;
+  }
+
   @mixin atMedium {
     padding-top: 0;
   }
