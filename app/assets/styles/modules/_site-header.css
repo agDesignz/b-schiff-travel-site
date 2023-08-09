@@ -21,6 +21,7 @@
     position: relative;
     display: flex;
     padding: 10px 0;
+    overflow: hidden;
 
     @mixin atMedium {
       justify-content: flex-end;
